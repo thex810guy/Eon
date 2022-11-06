@@ -10,16 +10,17 @@ local Scripts = require(2) -- placeholder number
 --[[
 A component is function called to create a new GUI
 object,
-It requires a Class in order to be created
+It requires a Class and Parent in order to be created
 otherwise the framework cannot call Instance.new
-because there's no Class
+because there's no Class nor Parent
 --]]
 
 local component = Eon {
 	-- eg: TextButton
 	Class = "Class name of the GUI Object",
+	Parent = Eon.PlayerGui(), -- Explained in GitHub Docs
 	
-	-- Everything is optional except Class,
+	-- Everything is optional except Class and Parent,
 	-- so you can create components without Style = {...}
 	
 	Style = {
