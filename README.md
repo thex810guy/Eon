@@ -68,8 +68,7 @@ module.stylesheet2 = {
 ```
 
 We can see that according to our code's logic the Frame is going to have a White Background
-But in the next script, it's gonna have a black background because in Eon when two stylesheets have the same properties the stylesheet further down the list shall 
-make the change
+But in the next script, it's gonna have a black background because in Eon when two stylesheets have the same properties the stylesheet further down the list is more important and thus override the previous property
 
 ```
 local Eon = require(script.Eon)
@@ -87,8 +86,11 @@ Component = Eon {
 ```
 
 ## Events
+
+
+
 ## Changes
 ## Sub-components/Children
 ## State Management
 
-All Coming Soon...
+### With Rodux
