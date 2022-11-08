@@ -1,4 +1,4 @@
-# Eon - UI Framework
+# Eon - UI Framework 1.0.0
 
 This is a small introduction to Eon
 
@@ -6,10 +6,9 @@ This is a small introduction to Eon
 
 In Eon to create components we call the module without brackets/parentheses like this "()"
 We only need to put a table next to it.
-
 Firstly, we'll add a Class in the Table
 
-```
+```lua
 local Eon = require(script.Eon)
 
 Component = Eon {
@@ -23,7 +22,7 @@ But we need to parent it so we are going to use!
 
 > :information_source: This Function returns a ScreenGui which is only shared within your current script, meaning that calling this function on other localScripts will return a completely new screenGui
 
-```
+```lua
 local Eon = require(script.Eon)
 
 Component = Eon {
@@ -39,7 +38,7 @@ Stylesheets are assigned via Component.Style
 
 The following script has a module called Stylesheets containing several stylesheet:
 
-```
+```lua
 local Eon = require(script.Eon)
 local Stylesheets = require(script.Stylesheets)
 
@@ -55,7 +54,7 @@ Component = Eon {
 
 Stylesheets Module:
 
-```
+```lua
 local module = {}
 
 module.stylesheet1 = {
@@ -68,9 +67,9 @@ module.stylesheet2 = {
 ```
 
 We can see that according to our code's logic the Frame is going to have a White Background
-But in the next script, it's gonna have a black background because in Eon when two stylesheets have the same properties the stylesheet further down the list is more important and thus override the previous property
+But in the next script, it's gonna have a black background because in Eon when two stylesheets have the same properties the stylesheet further down the list is more important and thus will override the previous property
 
-```
+```lua
 local Eon = require(script.Eon)
 local Stylesheets = require(script.Stylesheets)
 
@@ -87,10 +86,104 @@ Component = Eon {
 
 ## Events
 
+In Eon, events can binded directly within the constructor function,
+By adding a new key called "Event" then assigning a dictionary
+The key of dictionary must be the name of the RbxEvent and the value must be the function that will be binded
 
+```lua
+local Eon = require(script.Eon)
+local Scripts = require(script.Scripts)
 
-## Changes
+local component = Eon {
+	Class = "TextButton",
+	Parent = Eon.PlayerGui(),
+	
+	Event = {
+		Activated = Scripts.doSomething
+	},
+}
+```
+
+Scripts module:
+
+```lua
+local module = {}
+
+function module.doSomething(component, inputObject, times)
+  print("This button was clicked "..tostring(times).." times in a row")
+end
+
+function module.doSomethingElse(component)
+  print("Yay!")
+end
+```
+
+> :information_source: component argument is more advanced, therefore goto Advanced to learn about it
+
+### Changes
+
+You may wonder "Why is there another function?!?"
+Because we are going to do changes next!!
+It's almost identical to Event except it uses propertyName instead!
+We'll change the class to TextBox for the sake of this tutorial
+
+```lua
+local Eon = require(script.Eon)
+local Scripts = require(script.Scripts)
+
+local component = Eon {
+	Class = "TextButton",
+	Parent = Eon.PlayerGui(),
+	
+	Event = {
+		Activated = Scripts.doSomething
+	},
+        Change = {
+          Text = Scripts.doSomethingElse
+        }
+}
+```
+
 ## Sub-components/Children
+
+Not added
+
 ## State Management
 
+Not added
+
 ### With Rodux
+
+Not Added
+
+# Advanced
+
+## Api Reference
+
+### Components
+
+### Eon
+
+## Components
+
+# Credits, information and planed addons
+
+## Credits
+
+I got inspiration from Elttob's Fusion Ui Framework and Roblox Roact:
+[Fusion](https://elttob.uk/Fusion/)
+[Roact](https://roblox.github.io/roact/)
+
+### Version format
+
+*edition.update.bug-fixes*
+
+Editions will be newer and older versions of Eons. Note older edition will still be supported! New editions are completely differents eachothers.
+Update that all editions will recieve, those are addons.
+Bug Fixes are self explainatory
+
+### Planned Addons
+
+## Version 1.0.0 - Prerelease
+
+Yes it's infact the pre release, don't expect anything crazy right now.
