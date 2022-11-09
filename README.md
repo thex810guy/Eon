@@ -146,15 +146,37 @@ local component = Eon {
 
 ## Sub-components/Children
 
-Not added
+In Eon, the easiest wait to add children is this:
+
+```lua
+local Eon = require(script.Eon)
+local Scripts = require(script.Scripts)
+
+local component = Eon {
+	Class = "TextButton",
+	Parent = Eon.PlayerGui(),
+	
+	Children = Eon.MultipleTable(
+		{
+			Class = "UIPadding"
+		},
+		{
+			Class = "UICorners"
+		}
+	)
+}
+```
+
+We'll explain the code later on
+
 
 ## State Management
 
-Not added
+> 🧱 Sorry! Under Construction
 
 ### With Rodux
 
-Not Added
+Rodux support not yet
 
 # Advanced
 
@@ -164,7 +186,15 @@ Not Added
 
 ### Eon
 
-## Components
+### Spring
+
+## Projects
+
+### To-do list
+
+### Search plugin
+
+### Responsive Notification System
 
 # Credits, information and planed addons
 
@@ -183,6 +213,8 @@ Update that all editions will recieve, those are addons.
 Bug Fixes are self explainatory
 
 ### Planned Addons
+
+Rodux support. Instance to Component Conversion
 
 ## Version 0.9.8 - Prerelease
 
