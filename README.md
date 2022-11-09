@@ -1,4 +1,4 @@
-# Eon - UI Framework 1.0.0
+# Eon - UI Framework 0.9.8
 
 This is a small introduction to Eon
 
@@ -184,6 +184,6 @@ Bug Fixes are self explainatory
 
 ### Planned Addons
 
-## Version 1.0.0 - Prerelease
+## Version 0.9.8 - Prerelease
 
 Yes it's infact the pre release, don't expect anything crazy right now.
