@@ -7,17 +7,15 @@ Docs moved to
 
 ## Credits
 
-I got inspiration from Elttob's Fusion Ui Framework and Roblox Roact:
-[Fusion](https://elttob.uk/Fusion/)
-[Roact](https://roblox.github.io/roact/)
+I got inspiration from Elttob's Fusion Ui Framework, Facebook's React, VueJs and Roblox Roact:
+> [Fusion](https://elttob.uk/Fusion/)
+> [Roact](https://roblox.github.io/roact/)
+> [React](https://reactjs.org/)
+> [VueJs](https://www.google.com/search?query="vuejs")
 
 ### Version format
 
-*edition.update.bug-fixes*
-
-Editions will be newer and older versions of Eons. Note older edition will still be supported! New editions are completely differents eachothers.
-Update that all editions will recieve, those are addons.
-Bug Fixes are self explainatory
+*big-update.update.bug-fixes*
 
 ### Planned Addons
 
