@@ -11,7 +11,7 @@ I got inspiration from Elttob's Fusion Ui Framework, Facebook's React, VueJs and
 > [Fusion](https://elttob.uk/Fusion/)
 > [Roact](https://roblox.github.io/roact/)
 > [React](https://reactjs.org/)
-> [VueJs](https://www.google.com/search?query="vuejs")
+> [VueJs](https://www.google.com/search?query=vuejs)
 
 ### Version format
 
